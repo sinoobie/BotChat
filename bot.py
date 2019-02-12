@@ -7,7 +7,6 @@ udah open source jangan di recode bangsad!
 '''
 from fbchat import Client
 from fbchat.models import *
-from time import sleep
 from os import system
 
 g=('\033[1;32m')
