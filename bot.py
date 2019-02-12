@@ -23,7 +23,7 @@ for q,a in zip(Q,A):
 
 class Main_Client(Client):
 	QA=QA
-	bool=False
+	tol=False
 	def onMessage(self,author_id,message_object,thread_id=None,thread_type=ThreadType.USER,**kwargs):
 		self.markAsRead(author_id)
 		print(message_object)
@@ -38,9 +38,9 @@ class Main_Client(Client):
 			if self.msg in Main_Client.QA.keys():
 				getans=Main_Client.QA.get(self.msg)
 				self.messge_send=self.send(Message(text=getans),thread_id=thread_id,thread_type=thread_type)
-				Main_Client.bool=True
+				Main_Client.tol=True
 			else:
-				Main_Client.bool=True
+				Main_Client.tol=True
 				self.messge_send=self.send(Message(text='''Ngak Ngerti Kak:'('''),thread_id=thread_id,thread_type=thread_type)
 		self.markAsDelivered(author_id,self.messge_send)
 
