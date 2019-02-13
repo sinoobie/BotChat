@@ -1,3 +1,9 @@
+#!usr/bin/python
+#Author: KANG-NEWBIE
+'''
+Jangan Nakalin Aku kak, Aku masih smp
+Udah opensource jangan di recode dong bangsad!
+'''
 from fbchat import Client
 from fbchat.models import *
 from os import system
