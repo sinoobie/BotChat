@@ -39,7 +39,7 @@ class Main_Client(Client):
 			else:
 				Main_Client.bool=True
 				qus=open('q.txt','r').read()
-				res='bot tidak mengerti apa yang kamu ketik, dibawah ini adalah kata yang dapat bot mengerti:\n\n{}'.format(qus)
+				res='bot tidak mengerti apa yang kamu ketik, dibawah ini adalah kata yang dapat bot mengerti:\n{}'.format(qus)
 				self.messge_send=self.send(Message(text=res),thread_id=thread_id,thread_type=thread_type)
 		self.markAsDelivered(author_id,self.messge_send)
 
