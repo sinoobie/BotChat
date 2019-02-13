@@ -57,7 +57,10 @@ print("""%s
 \| |._.| |/-`
  '"'   '"'
 """%(c,r,g,r,g,r,g,r,g,r))
-email=input('%semail or username:%s '%(g,w))
-passs=input('%sPassword:%s '%(g,w))
-client=Main_Client(email,passs)
-client.listen()
+try:
+	email=input('%semail or username:%s '%(g,w))
+	passs=input('%sPassword:%s '%(g,w))
+	client=Main_Client(email,passs)
+	client.listen()
+except:
+	print("%s[!] ERROR: LOGIN GAGAL, CHECK EMAIL ATAU PASSWORD KAMU\n"%(r))
