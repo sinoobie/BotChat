@@ -32,7 +32,7 @@ class Main_Client(Client):
 				Main_Client.bool=True
 				t=time.ctime()
 				self.send(Message(text=t),thread_id=thread_id,thread_type=thread_type)
-			if self.msg in Main_Client.QA.keys():
+			elif self.msg in Main_Client.QA.keys():
 				getans=Main_Client.QA.get(self.msg)
 				self.messge_send=self.send(Message(text=getans),thread_id=thread_id,thread_type=thread_type)
 				Main_Client.bool=True
